@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #2b2b2b;
+  --color-muted: #6b6b6b;
+  --color-border: #e5e5e5;
+  --color-link: #3a6ea5;
+  --color-link-hover: #234d80;
+  --color-notice-bg: #fbf7ee;
+  --color-notice-border: #e3d9bf;
+  --color-notice-text: #5b4a23;
+  --max-width: 760px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Yu Gothic", Meiryo,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-link-hover);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  background-color: #ffffff;
+}
+
+.site-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-2) var(--space-2);
+}
+
+.site-title {
+  margin: 0 0 var(--space-1);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.site-title a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: 0.25rem 0;
+  color: var(--color-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.site-nav a[aria-current="page"] {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-2) var(--space-5);
+}
+
+h1 {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0 0 var(--space-3);
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: var(--space-5) 0 var(--space-2);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+h3 {
+  font-size: 1.02rem;
+  margin: var(--space-4) 0 var(--space-1);
+}
+
+p {
+  margin: 0 0 var(--space-2);
+}
+
+ul,
+ol {
+  margin: 0 0 var(--space-2);
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.3rem;
+}
+
+.lead {
+  margin-bottom: var(--space-3);
+}
+
+.notice {
+  margin: var(--space-3) 0;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-notice-bg);
+  border: 1px solid var(--color-notice-border);
+  border-radius: var(--radius);
+  color: var(--color-notice-text);
+}
+
+.notice p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info {
+  margin: var(--space-2) 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.contact-info li {
+  margin-bottom: 0.3rem;
+}
+
+.tokushoho-list {
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.tokushoho-list dt {
+  margin-top: var(--space-3);
+  padding-top: var(--space-2);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.tokushoho-list dt:first-of-type {
+  padding-top: var(--space-3);
+}
+
+.tokushoho-list dd {
+  margin: 0.4rem 0 var(--space-2);
+  padding: 0 0 var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.tokushoho-list dd .notice {
+  margin: 0.5rem 0 0;
+}
+
+.meta-date {
+  margin-top: var(--space-4);
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-5);
+}
+
+.site-footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-2);
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15.5px;
+    line-height: 1.85;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.08rem;
+  }
+  main {
+    padding: var(--space-3) var(--space-2) var(--space-4);
+  }
+}
